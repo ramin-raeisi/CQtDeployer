@@ -239,7 +239,7 @@ QuasarAppUtils::OptionsDataList DeployCore::avilableOptions() {
                             {"qif","-qif"}, "",
                             "Create the QIF installer for deployment programm"
                             " You can specify the path to your own installer template.",
-                            "Examples: cqtdeployer -qif path/to/myCustom/qif."
+                            "Examples: cqtdeployer -qif path/to/myCustom/qif.",
                         }});
     help.insert(group, {QuasarAppUtils::OptionData{
                             {"qifFromSystem"}, "",
@@ -908,6 +908,7 @@ QStringList DeployCore::Qt3rdpartyLibs(Platform platform) {
 
                   // xcb plugin
                   "libxcb-xinerama",
+                  "libxcb-xinput"
 
                   // qt GUI
                   "libpng",
