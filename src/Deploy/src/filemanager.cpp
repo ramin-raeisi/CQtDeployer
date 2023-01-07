@@ -188,6 +188,11 @@ bool FileManager::fileActionPrivate(const QString &file, const QString &target,
         }
     }
 
+    if (file.contains("Components")){
+      copy = true;
+      QuasarAppUtils::Params::log("force copy file: " + file, QuasarAppUtils::Info);
+    }
+
     QString operation = (isMove)? "move :": "copy";
 
     if (!copy) {
